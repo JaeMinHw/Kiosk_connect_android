@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/click.js"></script>
+    <script src="../js/disable.js"></script>
+    <script src="../js/move.js"></script>
+    <link href="../css/Kiosk_count.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        sessionStorage.setItem('count', 0);
+    </script>
+    <button id="m_button" onclick="minus(sessionStorage.getItem('cut'),sessionStorage.getItem('count'))">-</button>
+    <div id="count">
+    </div>
+    <button id="t_button" onclick="b_click('before_start_' +sessionStorage.getItem('cut')+'.html')">사진 촬영</button>
+    <button id="p_button" onclick="plus(sessionStorage.getItem('cut'),sessionStorage.getItem('count'))">+</button>
+    <script>
+        textArea('count');
+        btnDisabled('t_button');
+    </script>
+</body>
+
+</html>
